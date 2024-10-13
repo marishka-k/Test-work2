@@ -1,0 +1,68 @@
+.holder {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+}
+
+.preloader {
+  width: $preloader-size + px;
+  height: $preloader-size + px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: rotatePreloader $preloader-time + s infinite ease-in;
+}
+
+@keyframes rotatePreloader {
+  0% {
+  transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+  transform: translateX(-50%) translateY(-50%) rotateZ(-360deg);
+  }
+}
+.preloader div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.preloader div:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 10%;
+  height: 10%;
+  background-color: $secordary-text-color;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+@for $preloader-i from 1 through $preloader-count {
+  .preloader div:nth-child(#{$preloader-i}) {
+    transform: rotateZ(((360 / $preloader-count) * ($preloader-i - 1)) + deg);
+    animation: rotateCircle + $preloader-i $preloader-time + s infinite linear;
+    z-index: $preloader-count - $preloader-i;
+  }
+  @keyframes rotateCircle#{$preloader-i} {
+    #{percentage(((50 / $preloader-count) * ($preloader-i - 1)) / 100)} {
+      opacity: 0;
+    }
+    #{percentage((((50 / $preloader-count) + 0.0001) * ($preloader-i - 1)) / 100)} {
+      opacity: 1;
+      transform: rotateZ((0 - ((360 / $preloader-count) * ($preloader-i - 2))) + deg);
+    }
+    #{percentage((((50 / $preloader-count) * ($preloader-i - 0)) + 2) / 100)} {
+      transform: rotateZ((0 - ((360 / $preloader-count) * ($preloader-i - 1))) + deg);
+    }
+    #{percentage(((50 + ((50 / $preloader-count) * ($preloader-i - 0))) + 2) / 100)} {
+      transform: rotateZ((0 - ((360 / $preloader-count) * ($preloader-i - 1))) + deg);
+    }
+    100% {
+      transform: rotateZ((0 - ((360 / $preloader-count) * ($preloader-count - 1))) + deg);
+      opacity: 1;
+    }
+  }
+}

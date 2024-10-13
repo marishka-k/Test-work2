@@ -1,5 +1,3 @@
-import "./preloader.scss";
-
 export const Preloader = () => {
   return (
     <div class="holder">

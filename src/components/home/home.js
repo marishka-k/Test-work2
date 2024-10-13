@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { UserCard } from "../user-card/user-card";
-import "./home.scss";
 import { Preloader } from "../preloader/preloader";
 import avatar from "../../images/avatar.jpg";
 

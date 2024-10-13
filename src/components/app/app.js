@@ -1,11 +1,10 @@
 
 import { useEffect, useState } from 'react';
-import Header from '../header/header';
+import Header from '../app-header/app-header';
 import { useDispatch, useSelector } from 'react-redux';
-import './app.scss';
-import Home from '../home/home';
 import { getUsersUsername } from '../../services/actions/users-username';
 import { getUsersId } from '../../services/actions/users-id';
+import Main from '../main/main';
 
 
 function App() {
@@ -14,8 +13,6 @@ function App() {
   const [filterId, setFilterId] = useState('username')
   const [filterUsername, setFilterUsername] = useState('id')
   const [isLoading, setIsLoading] = useState(true)
-
-
 
   const dispatch = useDispatch();  
 
@@ -88,12 +85,10 @@ function App() {
   
 
   return (
-    <div className='page'>
+    <body class="page">
       <Header />
-      <main className="page__main">
-        <Home isLoading={isLoading } userFilter={userFilter} setUserFilter={setUserFilter} arrUsers={arrUsers}/>
-      </main>      
-    </div>  
+      <Main isLoading={isLoading } userFilter={userFilter} setUserFilter={setUserFilter} arrUsers={arrUsers}/>      
+    </body>  
   );
 }
 

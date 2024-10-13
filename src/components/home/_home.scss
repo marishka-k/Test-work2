@@ -8,7 +8,7 @@
   &__no-user {
     display: flex;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: $regularFont;
     line-height: 17px;
     padding: 30px 30px 30px 20px;
     justify-self: center;
@@ -17,9 +17,9 @@
 
   &__title {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: $boldFont;
     line-height: 39.01px;
-    color: #e31f24;
+    color: $title-text-color;
     margin: 0 0 26px 0;
     padding: 0;
   }
@@ -29,14 +29,14 @@
     display: grid;
     grid-template-columns: auto 1fr;
     width: 100%;
-    box-shadow: 0px 0px 10px 0px #0000001a;
+    box-shadow: 0px 0px 10px 0px $primary-color-shadow;
     border-radius: 10px;
   }
 
   &__filter {
     display: grid;
     min-width: 300px;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid $primary-color-active;
     padding: 30px 30px 30px 20px;
     grid-template-rows: auto 1fr;
     row-gap: 10px;
@@ -44,20 +44,20 @@
 
   &__filter-label {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: $semiboldFont;
     line-height: 22px;
     margin: 0 ;
   }
 
   &__input {
-    border: 1.5px solid #e9ecef;
+    border: 1.5px solid $primary-color-border;
     height: 46px;
     box-sizing: border-box;
     padding: 15px 16px;
     margin: 22px 0;
     border-radius: 8px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: $regularFont;
     line-height: 17px;
     width: 100%;
   }
@@ -84,7 +84,7 @@
 
     &_name {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: $semiboldFont;
       line-height: 22px;
       margin: 0 0 10px 0;
       padding: 0;
@@ -99,7 +99,7 @@
 
     &_info-lable {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: $semiboldFont;
       line-height: 20px;
       margin: 0 0 10px 0;
       padding: 0;
@@ -107,9 +107,9 @@
 
     &_info-text {
       font-size: 14px;
-      font-weight: 400;
+      font-weight: $regularFont;
       line-height: 20px;
-      color: #76787d;
+      color: $secordary-text-color;
       margin: 0;
       padding: 0;
     }
@@ -117,16 +117,16 @@
     &_about-lable {
       margin: 10px 0 25px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: $semiboldFont;
       line-height: 22px;
     }
 
     &_about-text {
       margin: 0;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: $regularFont;
       line-height: 17px;
-      color: #76787d;
+      color: $secordary-text-color;
     }
   }
 }

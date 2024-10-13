@@ -1,4 +1,3 @@
-import './user-card.scss';
 import avatar from '../../images/avatar.jpg'
 
 export const UserCard = ({user, active, setActive}) => {   
