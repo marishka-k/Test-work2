@@ -1,6 +1,7 @@
 {
   "name": "test2",
   "version": "0.1.0",
+  "homepage": "https://marishka-k.github.io/Test-work2",
   "private": true,
   "ependencies": {
     "@testing-library/jest-dom": "^5.17.0",
