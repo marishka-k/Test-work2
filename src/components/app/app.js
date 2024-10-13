@@ -85,7 +85,7 @@ function App() {
   
 
   return (
-    <body class="page">
+    <body className="page">
       <Header />
       <Main isLoading={isLoading } userFilter={userFilter} setUserFilter={setUserFilter} arrUsers={arrUsers}/>      
     </body>  
