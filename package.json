@@ -1,9 +1,8 @@
 {
   "name": "test2",
   "version": "0.1.0",
-  "homepage": "https://marishka-k.github.io/Test-work2",
   "private": true,
-  "ependencies": {
+  "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,9 +15,7 @@
     "sass": "^1.79.5",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+  "scripts": {    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,4 +39,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

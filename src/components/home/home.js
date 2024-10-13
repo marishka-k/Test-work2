@@ -28,7 +28,11 @@ export default function Home({ isLoading, userFilter, setUserFilter, arrUsers })
       <h1 className="home__title" >Жилфонд</h1>
       <div className="home__content">
         <div className="home__filter">
-          <input type="text" name="name" value={userFilter} onChange={(e) => setUserFilter(e.target.value)} placeholder="фильтр по имени" />
+          <div>
+            <p className='home__filter-label'>Поиск сотрудников</p>
+            <input type="text" name="name" className="home__input" value={userFilter} onChange={(e) => setUserFilter(e.target.value)} placeholder='Введите Id или имя пользователя'/>
+            <p className='home__filter-label'>Результаты</p>
+          </div>
           <div className="home__users">
             {isLoading 
               ?  <Preloader/>

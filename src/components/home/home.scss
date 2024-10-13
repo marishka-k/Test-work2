@@ -38,8 +38,28 @@
     min-width: 300px;
     border-right: 1px solid #e0e0e0;
     padding: 30px 30px 30px 20px;
-    grid-template-rows: 16px 1fr;
-    row-gap: 20px;
+    grid-template-rows: auto 1fr;
+    row-gap: 10px;
+  }
+
+  &__filter-label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0 ;
+  }
+
+  &__input {
+    border: 1.5px solid #e9ecef;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    margin: 22px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    width: 100%;
   }
 
   &__users {

@@ -1,5 +1,4 @@
 $activeColor: #E0E0E0;
-$nameColor: #333333;
 $emailColor: #76787D;
 $border: #E0E0E0;
 
@@ -43,8 +42,7 @@ $border: #E0E0E0;
     }
   }
   
-  &__name{
-    color: $nameColor;
+  &__name{    
     font-size: 14px;
     font-weight: 600;
     line-height: 17px;
